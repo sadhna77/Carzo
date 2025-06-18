@@ -1,0 +1,45 @@
+.responsive-box {
+  height: 100px; /* default: mobile */
+  background-color: #5459AC;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* Tablets (min-width: 640px) */
+@media (min-width: 640px) {
+  .responsive-box {
+    height: 150px;
+  }
+}
+
+/* Medium Tablets / Small Laptops (min-width: 768px) */
+@media (min-width: 768px) {
+  .responsive-box {
+    height: 180px;
+  }
+}
+
+/* Laptops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .responsive-box {
+    height: 220px;
+  }
+}
+
+/* Desktops (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .responsive-box {
+    height: 250px;
+  }
+}
+
+/* Large Desktops (min-width: 1536px) */
+@media (min-width: 1536px) {
+  .responsive-box {
+    height: 300px;
+  }
+}
