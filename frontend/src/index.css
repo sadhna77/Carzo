@@ -48,6 +48,23 @@ body,
   --card-bg: #002a4a;
 }
 
+/* App.css */
+@keyframes floatIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.float-in {
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+
 
 
 @keyframes swing {

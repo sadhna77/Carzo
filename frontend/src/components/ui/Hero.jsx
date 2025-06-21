@@ -6,6 +6,7 @@ import { FaGasPump, FaRoad, FaCogs } from "react-icons/fa";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 import { FaRegSadTear } from "react-icons/fa";
+import '../../../src/index.css'
 
 
 
@@ -29,8 +30,8 @@ export const Hero = () => {
   return (
     <div>
       <div className="flex flex-col items-center w-full p-10 py-20 gap-6 h-[1100px] font-winky bg-[#B2D8CE]">
-        <h1 className="text-lg text-[#648DB3]">Explore Cars Like Never Before.</h1>
-        <h1 className="text-[60px] font-bold text-[#5459AC] text-center">Find Your Dream Car</h1>
+        <h1 className="text-lg text-[#648DB3] float-in">Explore Cars Like Never Before.</h1>
+        <h1 className="text-[60px] font-bold text-[#5459AC] text-center float-in">Find Your Dream Car</h1>
 
         {/* Search component */}
         <Search onSearchComplete={handleSearchComplete} />
@@ -42,7 +43,7 @@ export const Hero = () => {
     <>
       <h1 className="text-3xl font-semibold text-black mb-4 text-center">Results</h1>
       <div className="overflow-y-auto scrollbar-hide h-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {searchedCars.map((car, index) => (
             <div
               key={index}
