@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Cardata from "../../../Data/Cardata";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendCar } from "./TrendCAr";
+import { TrendCar } from "./TrendCar";
 
 export const MostSearch = () => {
   return (
