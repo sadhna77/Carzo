@@ -13,7 +13,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import carAdmin from "../../assets/carAdmin.jpg";
+import carAdmin from "../../assets/CarAdmin.jpg";
 import { Input } from "@/components/ui/input";
 import { FaCheckCircle } from "react-icons/fa";
 import { ImSpinner2 } from "react-icons/im";
