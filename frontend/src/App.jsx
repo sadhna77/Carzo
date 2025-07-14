@@ -10,7 +10,7 @@ import { Admin } from "./components/ui/Admin";
 import { AdminSign } from "./components/ui/AdminSign";
 import { Admindashboard } from "./components/ui/Admindashboard";
 import { BoughtCar } from "./components/ui/BoughtCar";
-import { Wishlist } from "./components/ui/wishlist";
+import { Wishlist } from "./components/ui/Wishlist";
 import { Profile } from "./components/ui/Profile";
 
 
