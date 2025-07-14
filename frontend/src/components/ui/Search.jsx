@@ -56,7 +56,7 @@ export const Search = ({ onSearchComplete }) => {
   };
 
   return (
-    <div className="p-5 bg-white rounded-md md:rounded-full flex-col md:flex md:flex-row gap-5 px-5 md:items-center w-full md:w-max font-winky">
+    <div className="p-5 md:bg-white  border border-blue-700 rounded-md md:rounded-full w-full md:w-max font-winky flex flex-col items-center gap-4 md:flex-row md:items-center md:gap-5">
       <Select onValueChange={(val) => setCarType(val)}>
         <SelectTrigger className="w-[180px] focus:outline-none focus:ring-0 border-none shadow-none font-winky">
           <SelectValue placeholder="Type" />
@@ -77,7 +77,7 @@ export const Search = ({ onSearchComplete }) => {
           placeholder="Enter car name"
           value={carName}
           onChange={(e) => setCarName(e.target.value)}
-          className="w-50 border rounded-lg px-3  py-2 mt-1 text-sm focus:outline-none focus:ring-1 focus:ring-[#5459AC]"
+          className="w-50 border rounded-lg px-3  text-black py-2 mt-1 text-sm focus:outline-none focus:ring-1 focus:ring-[#5459AC]"
         />
       </div>
 
