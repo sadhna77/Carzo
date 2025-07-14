@@ -96,7 +96,7 @@ const updateUserInfo = async (req, res) => {
 
 const Login = async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body);
+  console.log("hiiiiiiiiiii");
 
   try {
     // Find user by email
