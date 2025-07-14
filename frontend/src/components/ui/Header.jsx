@@ -79,7 +79,7 @@ export const Header = ({ setFilteredCars }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5001/api/uploadProfile",
+        `${import.meta.env.VITE_API_BASE_URL}/api/uploadProfile`,
         formData
       );
       setProfileImageUrl(res.data.imageUrl);
@@ -109,7 +109,7 @@ export const Header = ({ setFilteredCars }) => {
     setNotFound(false);
     try {
       const response = await axios.post(
-        "http://192.168.0.102:5001/api/search",
+       `${import.meta.env.VITE_API_BASE_URL}/api/search`,
         {
           name: carName,
           price: price[0],

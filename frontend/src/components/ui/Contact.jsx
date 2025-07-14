@@ -21,7 +21,7 @@ const Contact = () => {
   const SendMessage = async (e) => {
   e.preventDefault(); // Prevent form reload
    try {
-     const res = await axios.post(`http://192.168.0.102:5001/api/contact`,
+     const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/contact`,
       {
        Name,email,message
       

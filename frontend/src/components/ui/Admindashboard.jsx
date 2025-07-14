@@ -66,7 +66,7 @@ export const Admindashboard = ({onSuccessAdded}) => {
        image
         
       );
-      const res = await axios.post("http://192.168.0.102:5001/api/add-car", {
+      const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/add-car`, {
         name: carName,
         mileage,
         price,

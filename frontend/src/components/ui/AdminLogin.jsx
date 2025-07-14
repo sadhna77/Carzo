@@ -18,7 +18,7 @@ export const AdminLogin = ({ onClose,onLoginSuccess }) => {
   const mutation = useMutation({
     mutationFn: async ({ email, password }) => {
       const res = await axios.post(
-        "http://192.168.0.102:5001/admin/admin-login",
+        `${import.meta.env.VITE_API_BASE_URL}/admin/admin-login`,
         {
           email,
           password,

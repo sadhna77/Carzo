@@ -21,7 +21,7 @@ export const Wishlist = () => {
     const getLikes = async () => {
       try {
         const res = await axios.get(
-          `http://192.168.0.102:5001/api/liked-byuser/${userId}`
+          `${import.meta.env.VITE_API_BASE_URL}/api/liked-byuser/${userId}`
         );
 
         setLikedCars(res.data.likedCars);

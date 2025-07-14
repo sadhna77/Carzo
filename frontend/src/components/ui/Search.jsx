@@ -28,7 +28,7 @@ export const Search = ({ onSearchComplete }) => {
     setNotFound(false);
     try {
       const response = await axios.post(
-        "http://192.168.0.102:5001/api/search",
+      `${import.meta.env.VITE_API_BASE_URL}/api/search`,
         {
           name: carName,
           price,

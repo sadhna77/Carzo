@@ -18,7 +18,7 @@ export const Dashboard = () => {
 
   // Example in useEffect()
   useEffect(() => {
-    fetch("http://localhost:5001/api/fetchcars")
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/fetchcars`)
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

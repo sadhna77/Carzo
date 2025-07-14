@@ -27,7 +27,7 @@ export const SignUpModal = ({ onClose, onLoginSuccess }) => {
 
   const mutation = useMutation({
     mutationFn: async ({ name, email, password }) => {
-      const res = await axios.post("http://192.168.0.102:5001/api/signup", {
+      const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/signup`, {
         name,
         email,
         password,

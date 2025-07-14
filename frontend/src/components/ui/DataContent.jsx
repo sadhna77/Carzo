@@ -20,7 +20,7 @@ export const DataContent = ({ searchedCars = [] }) => {
   useEffect(() => {
     setLoading(true);
 
-    fetch("http://192.168.0.102:5001/api/fetchcars")
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/fetchcars`)
       .then((res) => res.json())
       .then((data) => {
         setCars(data);
@@ -62,7 +62,7 @@ export const DataContent = ({ searchedCars = [] }) => {
     });
 
     try {
-      const res = await axios.put(`http://192.168.0.102:5001/api/liked-car`, {
+      const res = await axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/liked-car`, {
         carId,
         userId,
         likedCars: newLiked,
@@ -86,7 +86,7 @@ export const DataContent = ({ searchedCars = [] }) => {
     const getLikes = async () => {
       try {
         const res = await axios.get(
-          `http://192.168.0.102:5001/api/liked-byuser/${userId}`
+         `${import.meta.env.VITE_API_BASE_URL}/api/liked-byuser/${userId}`
         );
 
         const likedCarArray = res.data.likedCars; // [{ _id, carId, carname }]
@@ -110,7 +110,7 @@ export const DataContent = ({ searchedCars = [] }) => {
 
   // to share cars
   const shareCar = (car) => {
-    const url = `http:///192.168.0.102:5001/cars/${car._id}`;
+    const url = `${import.meta.env.VITE_API_BASE_URL}/cars/${car._id}`;
     if (navigator.share) {
       navigator.share({
         title: `Check out ${car.name}`,

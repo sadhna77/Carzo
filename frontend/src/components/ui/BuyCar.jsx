@@ -151,7 +151,7 @@ export const BuyCar = () => {
     );
     try {
       const res = await axios.post(
-        `http://192.168.0.102:5001/api/buy-car/${carId}`,
+       `${import.meta.env.VITE_API_BASE_URL}/api/buy-car/${carId}`,
         {
           userId,
           email,

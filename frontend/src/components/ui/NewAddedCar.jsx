@@ -36,7 +36,7 @@ export const NewAddedCar = ({ shouldRefetch, handleSuccess }) => {
       setLoading(true);
       try {
         const res = await axios.get(
-          "http://192.168.0.102:5001/api/fetchcars-new"
+          `${import.meta.env.VITE_API_BASE_URL}/api/fetchcars-new`
         );
         console.log("data new car", res.data);
         setCars(res.data);
@@ -59,7 +59,7 @@ export const NewAddedCar = ({ shouldRefetch, handleSuccess }) => {
   const EditCar = async (carId) => {
     try {
       const res = await axios.put(
-        `http://192.168.0.102:5001/api/edit-car/${carId}`,
+       `${import.meta.env.VITE_API_BASE_URL}/api/edit-car/${carId}`,
         {
           type: carType,
           price,
@@ -82,7 +82,7 @@ export const NewAddedCar = ({ shouldRefetch, handleSuccess }) => {
   const DeleteCar = async (carId) => {
     try {
       const res = await axios.delete(
-        `http://192.168.0.102:5001/api/edit-car/${carId}`
+        `${import.meta.env.VITE_API_BASE_URL}/api/edit-car/${carId}`
       );
 
       toast.success("Deleted car successfully!", {

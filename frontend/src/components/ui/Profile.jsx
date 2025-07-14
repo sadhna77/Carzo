@@ -68,7 +68,7 @@ export const Profile = () => {
 
     try {
       const res = await axios.post(
-        `http://192.168.0.102:5001/api/add-userinfo`,
+      `${import.meta.env.VITE_API_BASE_URL}/api/add-userinfo`,
         {
           userId,
           ...userInfo,
@@ -92,7 +92,7 @@ export const Profile = () => {
 
     try {
       const res = await axios.put(
-        `http://192.168.0.102:5001/api/update-userinfo`,
+       `${import.meta.env.VITE_API_BASE_URL}/api/update-userinfo`,
         {
           userId,
           ...updated,
@@ -124,7 +124,7 @@ export const Profile = () => {
     const getInfo = async () => {
       try {
         const res = await axios.get(
-          `http://192.168.0.102:5001/api/user-info/${userId}`
+        `${import.meta.env.VITE_API_BASE_URL}/api/user-info/${userId}`
         );
 
         console.log(res.data.user);

@@ -13,7 +13,7 @@ export const CarCart = ({ data,onSuccess }) => {
         // setLoading(true);
         try {
           const res = await axios.delete(
-            `http://192.168.0.102:5001/api/delete/${carId}`,
+           `${import.meta.env.VITE_API_BASE_URL}/api/delete/${carId}`,
             
           );
           toast.success("order Cancelled Successfully")
